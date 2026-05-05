@@ -21,7 +21,7 @@ import MyListingsPage from './components/MyListingsPage';
 import RentalsPage from './components/RentalsPage';
 import { Equipment, User } from './types';
 import { supabase } from './utils/supabase/client';
-import { Toaster } from 'sonner@2.0.3';
+import { Toaster } from 'sonner';
 import { projectId, publicAnonKey } from './utils/supabase/info';
 
 type Page = 
