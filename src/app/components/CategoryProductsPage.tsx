@@ -144,6 +144,8 @@ export default function CategoryProductsPage({ onNavigate, categoryId }: Categor
                   image: product.image,
                   dailyPrice: product.dailyPrice,
                   location: product.location,
+                  _backPage: 'category-products',
+                  _backCategoryId: categoryId,
                 })}
                 className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-semibold text-sm transition-all
                   ${product.available

@@ -166,7 +166,13 @@ export default function RentalDatePage({ equipment, onNavigate }: RentalDatePage
         <div className="max-w-[390px] mx-auto px-4 py-4">
           <div className="flex items-center gap-4">
             <button
-              onClick={() => onNavigate('equipment-detail', equipment)}
+              onClick={() => {
+                if ((equipment as any)._backPage === 'category-products') {
+                  onNavigate('category-products', { categoryId: (equipment as any)._backCategoryId });
+                } else {
+                  onNavigate('equipment-detail', equipment);
+                }
+              }}
               className="text-[#337f34] hover:bg-[#337f34]/10 p-2 rounded-full"
             >
               <ArrowLeft className="w-6 h-6" />
