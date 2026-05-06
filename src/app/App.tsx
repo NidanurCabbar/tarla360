@@ -19,6 +19,7 @@ import ReviewUserPage from './components/ReviewUserPage';
 import AddEquipmentPage from './components/AddEquipmentPage';
 import MyListingsPage from './components/MyListingsPage';
 import RentalsPage from './components/RentalsPage';
+import CategoryProductsPage from './components/CategoryProductsPage';
 import { Equipment, User } from './types';
 import { supabase } from './utils/supabase/client';
 import { Toaster } from 'sonner';
@@ -44,7 +45,8 @@ type Page =
   | 'review-user'
   | 'add-equipment'
   | 'my-listings'
-  | 'rentals';
+  | 'rentals'
+  | 'category-products';
 
 export default function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -57,6 +59,7 @@ export default function App() {
   const [browseCategory, setBrowseCategory] = useState<string | null>(null);
   const [chatData, setChatData] = useState<any>(null);
   const [reviewData, setReviewData] = useState<any>(null);
+  const [selectedCategoryId, setSelectedCategoryId] = useState<string | null>(null);
 
   // Check for existing session on mount
   useEffect(() => {
@@ -169,6 +172,8 @@ export default function App() {
       setChatData(data);
     } else if (page === 'review-user' && data) {
       setReviewData(data);
+    } else if (page === 'category-products' && data) {
+      setSelectedCategoryId(data.categoryId);
     }
     setCurrentPage(page);
     window.scrollTo(0, 0);
@@ -305,10 +310,16 @@ export default function App() {
             />
           )}
           {currentPage === 'rentals' && (
-            <RentalsPage 
+            <RentalsPage
               onNavigate={handleNavigate}
               accessToken={accessToken}
               currentUserId={currentUser?.id}
+            />
+          )}
+          {currentPage === 'category-products' && selectedCategoryId && (
+            <CategoryProductsPage
+              onNavigate={handleNavigate}
+              categoryId={selectedCategoryId}
             />
           )}
         </>
