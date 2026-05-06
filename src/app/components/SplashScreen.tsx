@@ -1,4 +1,4 @@
-import logo from 'figma:asset/a7c8485a90b31eee24e29b1603b4a323d8c17b9c.png';
+import logo from '../../assets/logo.svg';
 
 export default function SplashScreen() {
   return (
@@ -6,7 +6,7 @@ export default function SplashScreen() {
       <div className="animate-pulse">
         <img 
           src={logo} 
-          alt="TarlaApp Logo" 
+          alt="Tarla360 Logo" 
           className="w-32 h-32 object-contain drop-shadow-2xl" 
         />
       </div>

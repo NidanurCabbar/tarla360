@@ -21,7 +21,7 @@ import { Slider } from "./ui/slider";
 import { Checkbox } from "./ui/checkbox";
 import { ChevronDown } from "lucide-react";
 import { projectId, publicAnonKey } from '../utils/supabase/info';
-import logo from 'figma:asset/a7c8485a90b31eee24e29b1603b4a323d8c17b9c.png';
+import logo from '../../assets/logo.svg';
 
 interface DashboardPageProps {
   onNavigate: (page: string, data?: any) => void;
@@ -284,10 +284,10 @@ export default function DashboardPage({
                 onClick={() => onNavigate('landing')}
                 className="bg-white p-1 rounded-xl shadow-sm flex items-center justify-center hover:shadow-md transition-shadow cursor-pointer"
               >
-                <img src={logo} alt="TarlaApp Logo" className="w-16 h-16 object-contain" />
+                <img src={logo} alt="Tarla360 Logo" className="w-16 h-16 object-contain" />
               </button>
               <div>
-                <h2 className="text-[#337f34]">TarlaApp</h2>
+                <h2 className="text-[#337f34]">Tarla360</h2>
                 <p className="text-sm text-[#404040]">
                   {guestMode ? 'Ürünleri Keşfedin' : 'Ekipman keşfedin'}
                 </p>

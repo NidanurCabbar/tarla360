@@ -4,7 +4,7 @@ import { Label } from "./ui/label";
 import { ArrowLeft } from "lucide-react";
 import { useState } from "react";
 import { projectId, publicAnonKey } from "../utils/supabase/info";
-import logo from 'figma:asset/a7c8485a90b31eee24e29b1603b4a323d8c17b9c.png';
+import logo from '../../assets/logo.svg';
 
 interface SignUpPageProps {
   onNavigate: (page: string) => void;
@@ -159,11 +159,11 @@ export default function SignUpPage({ onNavigate, onLogin }: SignUpPageProps) {
         <div className="text-center space-y-4 mb-6">
           <div className="flex justify-center">
             <div className="bg-white p-2 rounded-2xl shadow-lg flex items-center justify-center">
-              <img src={logo} alt="TarlaApp Logo" className="w-32 h-32 object-contain" />
+              <img src={logo} alt="Tarla360 Logo" className="w-32 h-32 object-contain" />
             </div>
           </div>
           <div>
-            <h1 className="text-[#337f34] mb-2">TarlaApp</h1>
+            <h1 className="text-[#337f34] mb-2">Tarla360</h1>
             <p className="text-[#404040]">Hesap oluşturun</p>
           </div>
         </div>

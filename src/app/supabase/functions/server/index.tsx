@@ -10,7 +10,7 @@ const app = new Hono();
 app.use('*', cors());
 app.use('*', logger(console.log));
 
-console.log('TarlaApp API Server starting...');
+console.log('Tarla360 API Server starting...');
 
 // Create Supabase admin client
 const supabase = createClient(
@@ -20,13 +20,13 @@ const supabase = createClient(
 
 // Root endpoint
 app.get('/make-server-7a7385c4/', (c) => {
-  return c.json({ message: 'TarlaApp API Server', version: '1.0.0' });
+  return c.json({ message: 'Tarla360 API Server', version: '1.0.0' });
 });
 
 // Initialize admin account endpoint
 app.post('/make-server-7a7385c4/init-admin', async (c) => {
   try {
-    const adminEmail = 'kemal.yesilirmak@tarlaapp.com';
+    const adminEmail = 'kemal.yesilirmak@tarla360.com';
     const adminPassword = 'TarlaYonetici2024!';
     
     // Check if admin already exists

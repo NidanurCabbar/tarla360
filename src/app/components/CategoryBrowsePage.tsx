@@ -106,7 +106,7 @@ export default function CategoryBrowsePage({ onNavigate }: CategoryBrowsePagePro
         <div className="mt-6 bg-white rounded-2xl p-5 shadow-md">
           <h4 className="text-[#337f34] mb-2">Kategoriler Hakkında</h4>
           <p className="text-sm text-[#404040] leading-relaxed">
-            TarlaApp'ta {categories.length} farklı kategori ve {categories.reduce((acc, cat) => acc + cat.products.length, 0)} farklı ekipman türü bulunmaktadır. 
+            Tarla360'ta {categories.length} farklı kategori ve {categories.reduce((acc, cat) => acc + cat.products.length, 0)} farklı ekipman türü bulunmaktadır. 
             İhtiyacınız olan ekipmanı kolayca bulabilir, güvenli bir şekilde kiralayabilirsiniz.
           </p>
         </div>

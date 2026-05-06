@@ -193,7 +193,7 @@ export default function ProfilePage({ onNavigate, userRole, currentUser, onLogou
 
         {/* App Info */}
         <div className="text-center text-sm text-gray-400">
-          <p>TarlaApp v1.0.0</p>
+          <p>Tarla360 v1.0.0</p>
           <p className="mt-1">© 2025 Tüm hakları saklıdır</p>
         </div>
       </div>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Outer circle ring -->
+  <circle cx="100" cy="100" r="96" stroke="#1dbc60" stroke-width="4" fill="none" opacity="0.4"/>
+
+  <!-- Main background circle -->
+  <circle cx="100" cy="100" r="88" fill="url(#bgGrad)"/>
+
+  <!-- 360 arc indicator (top arc) -->
+  <path d="M 100 18 A 82 82 0 1 1 99.999 18" stroke="#54a43f" stroke-width="3" fill="none" stroke-dasharray="6 4" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Wheat stalk left -->
+  <line x1="72" y1="140" x2="72" y2="85" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="67" cy="80" rx="5" ry="9" fill="#fff" opacity="0.9" transform="rotate(-15 67 80)"/>
+  <ellipse cx="74" cy="70" rx="5" ry="9" fill="#fff" opacity="0.9" transform="rotate(10 74 70)"/>
+  <ellipse cx="66" cy="61" rx="5" ry="9" fill="#fff" opacity="0.85" transform="rotate(-10 66 61)"/>
+  <ellipse cx="73" cy="52" rx="4.5" ry="8" fill="#fff" opacity="0.8" transform="rotate(8 73 52)"/>
+
+  <!-- Wheat stalk right -->
+  <line x1="128" y1="140" x2="128" y2="85" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="133" cy="80" rx="5" ry="9" fill="#fff" opacity="0.9" transform="rotate(15 133 80)"/>
+  <ellipse cx="126" cy="70" rx="5" ry="9" fill="#fff" opacity="0.9" transform="rotate(-10 126 70)"/>
+  <ellipse cx="134" cy="61" rx="5" ry="9" fill="#fff" opacity="0.85" transform="rotate(10 134 61)"/>
+  <ellipse cx="127" cy="52" rx="4.5" ry="8" fill="#fff" opacity="0.8" transform="rotate(-8 127 52)"/>
+
+  <!-- Center wheat stalk -->
+  <line x1="100" y1="145" x2="100" y2="80" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="94" cy="74" rx="5.5" ry="10" fill="#fff" transform="rotate(-12 94 74)"/>
+  <ellipse cx="106" cy="64" rx="5.5" ry="10" fill="#fff" transform="rotate(12 106 64)"/>
+  <ellipse cx="94" cy="54" rx="5" ry="9" fill="#fff" opacity="0.9" transform="rotate(-10 94 54)"/>
+  <ellipse cx="105" cy="45" rx="4.5" ry="8" fill="#fff" opacity="0.85" transform="rotate(8 105 45)"/>
+  <ellipse cx="100" cy="38" rx="4" ry="7" fill="#fff" opacity="0.8"/>
+
+  <!-- "360" text badge -->
+  <rect x="62" y="150" width="76" height="30" rx="15" fill="#fff" opacity="0.95"/>
+  <text x="100" y="171" text-anchor="middle" font-family="'Arial Black', 'Arial', sans-serif" font-size="18" font-weight="900" fill="#337f34" letter-spacing="1">360°</text>
+
+  <!-- Circular arrow (rotation symbol) -->
+  <path d="M 152 90 A 22 22 0 1 1 142 112" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.85"/>
+  <polygon points="138,108 144,116 150,110" fill="#fff" opacity="0.85"/>
+
+  <!-- Gradient definition -->
+  <defs>
+    <radialGradient id="bgGrad" cx="40%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#1dbc60"/>
+      <stop offset="60%" stop-color="#337f34"/>
+      <stop offset="100%" stop-color="#1a5c20"/>
+    </radialGradient>
+  </defs>
+</svg>

@@ -1,6 +1,6 @@
 import { Button } from "./ui/button";
 import { Tractor, Shield, Clock, Users, ArrowRight, Truck, Cog, Construction, Sprout, Droplets, Wheat, Droplet } from "lucide-react";
-import logo from 'figma:asset/a7c8485a90b31eee24e29b1603b4a323d8c17b9c.png';
+import logo from '../../assets/logo.svg';
 import { useState, useEffect, useRef } from 'react';
 import { projectId, publicAnonKey } from '../utils/supabase/info';
 
@@ -185,7 +185,7 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
         <div className="max-w-[390px] mx-auto px-4 pt-4">
           <div className="flex items-center gap-3">
             <div className="bg-white p-1 rounded-xl shadow-md flex items-center justify-center">
-              <img src={logo} alt="TarlaApp Logo" className="w-12 h-12 object-contain" />
+              <img src={logo} alt="Tarla360 Logo" className="w-12 h-12 object-contain" />
             </div>
             <div className="flex items-center" style={{ fontSize: '1.5em', fontWeight: '700' }}>
               <span className="bg-gradient-to-r from-[#1dbc60] to-[#54a43f] bg-clip-text text-transparent tracking-tight">
@@ -310,7 +310,7 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
       {/* Features Section */}
       <div className="max-w-[390px] mx-auto px-4 py-8 relative">
         <h2 className="text-center text-[#337f34] mb-6 drop-shadow-sm">
-          Neden TarlaApp?
+          Neden Tarla360?
         </h2>
 
         <div className="grid grid-cols-2 gap-4 mb-8">
