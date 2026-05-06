@@ -1,4 +1,4 @@
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/a7c8485a90b31eee24e29b1603b4a323d8c17b9c.png';
 
 export default function SplashScreen() {
   return (

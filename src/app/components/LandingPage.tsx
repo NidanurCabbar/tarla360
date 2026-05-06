@@ -1,6 +1,6 @@
 import { Button } from "./ui/button";
 import { Tractor, Shield, Clock, Users, ArrowRight, Truck, Cog, Construction, Sprout, Droplets, Wheat, Droplet } from "lucide-react";
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/a7c8485a90b31eee24e29b1603b4a323d8c17b9c.png';
 import { useState, useEffect, useRef } from 'react';
 import { projectId, publicAnonKey } from '../utils/supabase/info';
 

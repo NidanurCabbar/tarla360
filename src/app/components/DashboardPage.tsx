@@ -21,7 +21,7 @@ import { Slider } from "./ui/slider";
 import { Checkbox } from "./ui/checkbox";
 import { ChevronDown } from "lucide-react";
 import { projectId, publicAnonKey } from '../utils/supabase/info';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/a7c8485a90b31eee24e29b1603b4a323d8c17b9c.png';
 
 interface DashboardPageProps {
   onNavigate: (page: string, data?: any) => void;

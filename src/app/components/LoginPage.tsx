@@ -5,7 +5,7 @@ import { Tractor, ArrowLeft } from "lucide-react";
 import { useState, useEffect } from "react";
 import { supabase } from "../utils/supabase/client";
 import { projectId, publicAnonKey } from "../utils/supabase/info";
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/a7c8485a90b31eee24e29b1603b4a323d8c17b9c.png';
 
 interface LoginPageProps {
   onNavigate: (page: string) => void;
