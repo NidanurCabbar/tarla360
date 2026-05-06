@@ -320,24 +320,6 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
           ))}
         </div>
 
-        {/* Stats */}
-        <div className="bg-gradient-to-br from-[#1dbc60] to-[#54a43f] rounded-2xl p-6 shadow-xl mb-8 text-white">
-          <div className="grid grid-cols-3 gap-4 text-center">
-            <div>
-              <div className="text-2xl mb-1">500+</div>
-              <div className="text-xs opacity-90">Ekipman</div>
-            </div>
-            <div>
-              <div className="text-2xl mb-1">1000+</div>
-              <div className="text-xs opacity-90">Kullanıcı</div>
-            </div>
-            <div>
-              <div className="text-2xl mb-1">50+</div>
-              <div className="text-xs opacity-90">Şehir</div>
-            </div>
-          </div>
-        </div>
-
         {/* CTA Buttons */}
         <div className="space-y-3 mb-8">
           <Button
