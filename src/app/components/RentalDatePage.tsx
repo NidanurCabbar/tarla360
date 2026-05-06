@@ -19,6 +19,12 @@ export default function RentalDatePage({ equipment, onNavigate }: RentalDatePage
   const [endTime, setEndTime] = useState<string>('09:00');
   const [rentalType, setRentalType] = useState<'daily' | 'hourly'>('daily');
 
+  // Farklı kaynaklardan gelen fiyat alanlarını normalize et
+  const dailyPrice: number =
+    Number(equipment.pricePerDay ?? (equipment as any).dailyPrice ?? 0);
+  const hourlyPrice: number =
+    Number(equipment.pricePerHour ?? (equipment as any).hourlyPrice ?? (dailyPrice > 0 ? Math.round(dailyPrice / 8) : 0));
+
   // Check if a date is disabled
   const isDateDisabled = (date: Date) => {
     if (!equipment.unavailablePeriods) return false;
@@ -109,14 +115,11 @@ export default function RentalDatePage({ equipment, onNavigate }: RentalDatePage
     let calculatedDays = 0;
     
     if (rentalType === 'daily') {
-      // Günlük kiralama: Her 24 saatlik periyot 1 gün ücreti
-      // 24 saati geçen her saat için yeni gün ücreti ekle
       calculatedDays = Math.ceil(totalHours / 24);
-      total = calculatedDays * equipment.pricePerDay;
+      total = calculatedDays * dailyPrice;
     } else {
-      // Saatlik kiralama: Her saat için ücret
       const calculatedHours = Math.ceil(totalHours);
-      total = calculatedHours * equipment.pricePerHour;
+      total = calculatedHours * hourlyPrice;
     }
     
     return { 
@@ -204,7 +207,7 @@ export default function RentalDatePage({ equipment, onNavigate }: RentalDatePage
             <label className="flex items-center justify-between p-4 border border-gray-200 rounded-[10px] cursor-pointer hover:bg-[#f5fff5]">
               <div>
                 <div className="text-[#337f34]">Günlük</div>
-                <div className="text-sm text-gray-500">₺{equipment.pricePerDay}/gün</div>
+                <div className="text-sm text-gray-500">₺{dailyPrice}/gün</div>
                 <div className="text-xs text-gray-400 mt-1">Her 24 saatlik periyot için</div>
               </div>
               <input
@@ -219,7 +222,7 @@ export default function RentalDatePage({ equipment, onNavigate }: RentalDatePage
             <label className="flex items-center justify-between p-4 border border-gray-200 rounded-[10px] cursor-pointer hover:bg-[#f5fff5]">
               <div>
                 <div className="text-[#337f34]">Saatlik</div>
-                <div className="text-sm text-gray-500">₺{equipment.pricePerHour}/saat</div>
+                <div className="text-sm text-gray-500">₺{hourlyPrice}/saat</div>
                 <div className="text-xs text-gray-400 mt-1">Her saat için</div>
               </div>
               <input
@@ -358,12 +361,12 @@ export default function RentalDatePage({ equipment, onNavigate }: RentalDatePage
                 <p className="text-sm text-[#404040]">Toplam Tutar</p>
                 {rentalType === 'daily' && (
                   <p className="text-xs text-gray-500">
-                    {days} gün × ₺{equipment.pricePerDay}
+                    {days} gün × ₺{dailyPrice}
                   </p>
                 )}
                 {rentalType === 'hourly' && (
                   <p className="text-xs text-gray-500">
-                    {hours} saat × ₺{equipment.pricePerHour}
+                    {hours} saat × ₺{hourlyPrice}
                   </p>
                 )}
               </div>
