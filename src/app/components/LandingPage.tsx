@@ -187,24 +187,12 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
             <div className="bg-white p-1 rounded-xl shadow-md flex items-center justify-center">
               <img src={logo} alt="Tarla360 Logo" className="w-12 h-12 object-contain" />
             </div>
-            <div className="flex items-center" style={{ fontSize: '1.5em', fontWeight: '700' }}>
-              <span className="bg-gradient-to-r from-[#1dbc60] to-[#54a43f] bg-clip-text text-transparent tracking-tight">
-                Tar
+            <div className="flex items-center" style={{ fontSize: '1.5em', fontWeight: '800' }}>
+              <span className="bg-gradient-to-r from-[#1dbc60] to-[#337f34] bg-clip-text text-transparent tracking-tight">
+                Tarla
               </span>
-              <span className="relative inline-flex items-center justify-center mx-[0.05em]" style={{ width: '0.35em', height: '1em' }}>
-                <span className="absolute bottom-0 w-[0.15em] h-full bg-gradient-to-t from-[#54a43f] to-[#1dbc60] rounded-full"></span>
-                <span className="absolute top-0 left-1/2 -translate-x-1/2 flex flex-col gap-[0.02em]">
-                  <span className="w-[0.25em] h-[0.08em] bg-gradient-to-r from-[#1dbc60] to-[#54a43f] rounded-full"></span>
-                  <span className="w-[0.22em] h-[0.08em] bg-gradient-to-r from-[#1dbc60] to-[#54a43f] rounded-full ml-[0.01em]"></span>
-                  <span className="w-[0.2em] h-[0.08em] bg-gradient-to-r from-[#1dbc60] to-[#54a43f] rounded-full"></span>
-                  <span className="w-[0.18em] h-[0.08em] bg-gradient-to-r from-[#1dbc60] to-[#54a43f] rounded-full ml-[0.01em]"></span>
-                  <span className="w-[0.16em] h-[0.08em] bg-gradient-to-r from-[#1dbc60] to-[#54a43f] rounded-full"></span>
-                </span>
-              </span>
-              <span className="bg-gradient-to-r from-[#1dbc60] to-[#54a43f] bg-clip-text text-transparent tracking-tight">
-                acın
-              </span>
-              <span className="ml-1 text-[1.2em]">🌾</span>
+              <span className="text-[#337f34] tracking-tight">360</span>
+              <span className="ml-1 text-[0.9em] text-[#1dbc60]">°</span>
             </div>
           </div>
         </div>
